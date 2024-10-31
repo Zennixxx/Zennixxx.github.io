@@ -207,7 +207,3 @@ body {
     width: 100%;
     background: var(--auburn);
 }
-.home-sci a:hover{
-    color: var(--white);
-    border: 2px solid var(--auburn);
-}
