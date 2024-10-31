@@ -1,0 +1,215 @@
+body{
+    background-color: black;
+:root {
+    --night: #0a100d;
+    --ash-gray: #b9baa3;
+    --timberwolf: #d6d5c9;
+    --auburn: #a22c29;
+    --burnt-umber: #902923;
+
+    --orange-web: #faa916;
+    --white: #fbfffe;
+    --dim-gray: #6d676e;
+    --eerie-black: #1b1b1e;
+    --carmine: #96031a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* background: var(--eerie-black); */
+    color: white;
+}
+.home{
+    height: 100vh;
+    background: url('images/background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+}
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1000%;
+    height: 100%;
+/*     border: 2px solid red; */
+    background: transparent;
+    transition: .3s;
+}
+
+
+.home-content{
+    width: 400px;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+    /* background: var(--burnt-umber); */
+}
+.home-content h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.home-content h3{
+    font-size: 24px;
+    color: var(--orange-web);
+}
+.home-content p{
+    font-size: 18px;
+}
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    height: 50px;
+    margin-top: 10px;
+}
+.btn-box a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 150px;
+    height: 100%;
+    font-weight: bolder;
+    border: 1px solid var(--orange-web);
+    color: var(--night);
+    background: var(--orange-web);
+    border-radius: 10px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-out;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--eerie-black);
+    z-index: -1;
+    transition: .3s;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+.btn-box a:hover{
+    color: var(--orange-web);
+}
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #faa916;
+}
+.btn-box a:nth-child(2)::before{
+    background: var(--orange-web);
+}
+.btn-box a:nth-child(2):hover{
+    color: var(--night);
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: var(--night);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.15em;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+.navbara a:hover,
+.navbar a.active{    
+    color: var(--orange-web);
+}
+.navbar a:hover::after,
+.navbar a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.3em, 0);
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 30px;
+    width: 170px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--auburn);
+    border-radius: 50%;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    /* background: var(--white); */
+    text-decoration: none;
+    transition: .3s, border 0.5s ease;
+    z-index: 1;
+    overflow: hidden;
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    /* rotate: 45deg; */
+    width: 0%;
+    height: 0%;
+    background: transparent;
+    z-index: -1;
+    transition: .3s;
+}
+.home-sci a:hover::before{
+    height: 100%;
+    width: 100%;
+    background: var(--auburn);
+}
+/* .home-sci a:hover{
+    color: var(--white);
+    border: 2px solid var(--auburn);
+} */
