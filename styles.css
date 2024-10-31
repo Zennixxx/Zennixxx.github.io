@@ -25,7 +25,7 @@ body {
 }
 .home{
     height: 100vh;
-    background: url('images/background.png') no-repeat;
+    background: url('background.png') no-repeat;
     background-size: cover;
     background-position: center;
     padding: 0 5%;
